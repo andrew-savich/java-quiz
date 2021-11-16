@@ -1,0 +1,26 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+http://www.liquibase.org/xml/ns/pro
+http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+
+    <changeSet id="0-init" author="AndrewSav">
+        <tagDatabase tag="db_init" />
+    </changeSet>
+
+    <include file="01-quizzes/01-changeset-quizzes.xml" relativeToChangelogFile="true" />
+
+    <changeSet id="1-cuizzes" author="AndrewSav">
+        <tagDatabase tag="01-quizzes" />
+    </changeSet>
+
+    <include file="02-answers/02-changeset-answers.xml" relativeToChangelogFile="true" />
+
+    <changeSet id="2-answers" author="AndrewSav">
+        <tagDatabase tag="02-answers" />
+    </changeSet>
+
+</databaseChangeLog>

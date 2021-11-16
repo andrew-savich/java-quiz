@@ -1,0 +1,2 @@
+DROP TABLE quizzes;
+GO
